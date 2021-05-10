@@ -64,11 +64,23 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Move.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Move.Designer.cs">
+      <DependentUpon>Move.cs</DependentUpon>
+    </Compile>
     <Compile Include="MoveVehicle.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MoveVehicle.Designer.cs">
       <DependentUpon>MoveVehicle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Optimize.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Optimize.Designer.cs">
+      <DependentUpon>Optimize.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -77,6 +89,12 @@
     </Compile>
     <Compile Include="Search.Designer.cs">
       <DependentUpon>Search.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShowAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowAll.Designer.cs">
+      <DependentUpon>ShowAll.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="CheckIn.resx">
       <DependentUpon>CheckIn.cs</DependentUpon>
@@ -87,8 +105,14 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Move.resx">
+      <DependentUpon>Move.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MoveVehicle.resx">
       <DependentUpon>MoveVehicle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Optimize.resx">
+      <DependentUpon>Optimize.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -101,6 +125,9 @@
     </Compile>
     <EmbeddedResource Include="Search.resx">
       <DependentUpon>Search.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowAll.resx">
+      <DependentUpon>ShowAll.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

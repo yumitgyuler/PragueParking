@@ -55,5 +55,17 @@ namespace WinFormUI
             CheckOut checkOut = new CheckOut();
             LoadForm(checkOut);
         }
+
+        private void btnMoveVehicle_Click(object sender, EventArgs e)
+        {
+            Move move = new Move();
+            LoadForm(move);
+        }
+
+        private void btnDisplayAll_Click(object sender, EventArgs e)
+        {
+            ShowAll showAll = new ShowAll();
+            LoadForm(showAll);
+        }
     }
 }

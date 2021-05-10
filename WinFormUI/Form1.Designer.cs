@@ -193,6 +193,7 @@ namespace WinFormUI
             this.btnDisplayAll.TabIndex = 4;
             this.btnDisplayAll.Text = "Display all";
             this.btnDisplayAll.UseVisualStyleBackColor = false;
+            this.btnDisplayAll.Click += new System.EventHandler(this.btnDisplayAll_Click);
             // 
             // btnMoveVehicle
             // 
@@ -208,6 +209,7 @@ namespace WinFormUI
             this.btnMoveVehicle.TabIndex = 3;
             this.btnMoveVehicle.Text = "Move vehicle";
             this.btnMoveVehicle.UseVisualStyleBackColor = false;
+            this.btnMoveVehicle.Click += new System.EventHandler(this.btnMoveVehicle_Click);
             // 
             // btnCheckOut
             // 

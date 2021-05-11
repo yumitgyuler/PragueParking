@@ -68,6 +68,7 @@ namespace WinFormUI
         {
             ShowAll showAll = new ShowAll();
             LoadForm(showAll);
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)

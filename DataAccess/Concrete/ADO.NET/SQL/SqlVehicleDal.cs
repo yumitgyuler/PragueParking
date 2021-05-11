@@ -141,7 +141,11 @@ namespace DataAccess.Concrete.ADO.NET.SQL
                     SqlDataReader dr = cmd.ExecuteReader();
                     while (dr.Read())
                     {
-                        vehicles.Add(new Vehicle((string)dr["LicensePlate"]) { SpotNumber = (int)dr["ParkingSpotId"], VehicleTypeId = (int)dr["VehicleTypeId"] });
+                        vehicles.Add(new Vehicle((string)dr["LicensePlate"]) { SpotNumber = (int)dr["ParkingSpotId"],
+                            VehicleTypeId = (int)dr["VehicleTypeId"], ArrivalTime = (DateTime)dr["ArrivalDate"],
+                            ParkedTime = (TimeSpan)(DateTime.Now - (DateTime)dr["ArrivalDate"])
+                        });
+                        
                     }
                 }
                 catch (Exception e)
@@ -155,7 +159,11 @@ namespace DataAccess.Concrete.ADO.NET.SQL
             return vehicles;
 
         }
-
+        private TimeSpan GetTimeSpan(DateTime serverTime, DateTime arrival)
+        {
+            TimeSpan diff = serverTime - arrival;
+            return diff;
+        }
         //Return singel vehicle object by licanse plate
         public Vehicle GetVehicleByLicensePlate(Vehicle vehicle)
         {

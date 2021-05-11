@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Business;
+using Entities.Concrete;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,32 @@ namespace WinFormUI
 {
     public partial class CheckOut : Form
     {
+        static string connectionString = @"Data Source=AMANDASDATOR\SQLEXPRESS;Initial Catalog=PPDBYumitGyuler;Integrated Security=True";
+        Methods methods = new Methods(connectionString);
         public CheckOut()
         {
             InitializeComponent();
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            Vehicle vehicle = new Vehicle(txtLicensePlate.Text);
+
+            if (rdbtnRecievePayment.Checked)
+            {
+                vehicle = methods.RemoveVehicle(vehicle, true);
+            }
+            else if (rdbtnDontRecievePayment.Checked)
+            {
+                vehicle = methods.RemoveVehicle(vehicle, false);
+            }
+
+            if (vehicle != null)
+            {
+                lblArrival.Text = $"Vehicle with registration number {vehicle.LicensePlate} was succesfully removed";
+                
+            }
+
         }
     }
 }

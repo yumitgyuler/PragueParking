@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace WinFormUI
 {
     public partial class Form1 : Form
@@ -66,6 +67,12 @@ namespace WinFormUI
         {
             ShowAll showAll = new ShowAll();
             LoadForm(showAll);
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            this.Location = Screen.AllScreens[1].WorkingArea.Location;
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
     }
 }

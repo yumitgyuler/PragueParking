@@ -8,12 +8,12 @@ using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using System.Globalization;
 
-namespace ConsoleUI
+namespace Business
 {
-    class MainMenu
+    public class Methods
     {
         VehicleManager vehicleManager;
-        public MainMenu(string connectionString)
+        public Methods(string connectionString)
         {
             //Create instances bussiness manager class for vehicle by databasetype and send to database connectstring.
             vehicleManager = new VehicleManager(new SqlVehicleDal(connectionString));
@@ -58,13 +58,13 @@ namespace ConsoleUI
                 switch (Console.ReadLine())
                 {
                     case "1":
-                        SearchVehicle();
+                        SearchVehicle("hej");
                         break;
                     case "2":
-                        AddVehicle();
+                        //AddVehicle();
                         break;
                     case "3":
-                        RemoveVehicle();
+                        //RemoveVehicle();
                         break;
                     case "4":
                         MoveVehicle();
@@ -121,11 +121,11 @@ namespace ConsoleUI
             {
                 Console.WriteLine("{0}: {1} Kč", p.ArrivalTime, p.TotalCost);
             }
-            
+
             if (startDate != endDate)
             {
-               decimal avarage = vehicleManager.GetAverage(startDate, endDate);
-                Console.WriteLine("Avarage per day: {0}",avarage);
+                decimal avarage = vehicleManager.GetAverage(startDate, endDate);
+                Console.WriteLine("Avarage per day: {0}", avarage);
             }
             Console.ReadLine();
         }
@@ -166,95 +166,41 @@ namespace ConsoleUI
             }
         }
         //Searching for a vehicle by license plate
-        public void SearchVehicle()
+        public Vehicle SearchVehicle(string licensePlate)
         {
-            string licansePlate = GetLicensePlate();
-            Vehicle vehicle = new Vehicle(licansePlate);
+            Vehicle vehicle = new Vehicle(licensePlate);
             //Get back vehicle from database
             vehicle = vehicleManager.GetVehicleByLicensePlate(vehicle);
-            Console.Clear();
-            Console.SetCursorPosition(38, 13);
-            Console.WriteLine("{0} with license plate \"{1}\" is parked at spot {2}", vehicle.VehicleType, vehicle.LicensePlate, vehicle.SpotNumber);
-            Console.SetCursorPosition(38, 15);
-            Console.WriteLine("Arrival: {0}", vehicle.ArrivalTime);
-            Console.SetCursorPosition(38, 17);
-            Console.WriteLine("Total parking time: {0} days, {1} hours, {2} minutes", vehicle.ParkedTime.Days, vehicle.ParkedTime.Hours, vehicle.ParkedTime.Minutes);
-            Console.SetCursorPosition(38, 19);
-            Console.WriteLine("Total parking fee: {0:c}", PriceCalculate(vehicle));
-            Console.ReadLine();
+            return vehicle;
+
         }
         //Add vehicle by license plate and vehicle type
-        public void AddVehicle()
+        public Vehicle AddVehicle(Vehicle vehicle)
         {
-            int vehicleTypeId = GetVehicleTyp();
-            string licansePlate = GetLicensePlate();
-            Vehicle vehicle = new Vehicle(licansePlate) { VehicleTypeId = vehicleTypeId };
             bool isAdded = vehicleManager.Add(vehicle);
             if (isAdded)
             {
-                Console.Clear();
-                Console.SetCursorPosition(38, 13);
+
                 vehicle = vehicleManager.GetVehicleByLicensePlate(vehicle);
-                Console.WriteLine("Car with license plate \"{0}\" is parked at position {1}", vehicle.LicensePlate, vehicle.SpotNumber);
-                Console.ReadLine();
+
             }
+            return vehicle;
         }
-        public void RemoveVehicle()
+        public Vehicle RemoveVehicle(Vehicle vehicle, bool recievePayment)
         {
-            string licansePlate = GetLicensePlate();
-            Vehicle vehicle = new Vehicle(licansePlate);
-            bool check = true;
-            while (check)
+            if (!recievePayment)
             {
-                
-                Console.Clear();
-                Console.SetCursorPosition(38, 14);
-                Console.ForegroundColor = ConsoleColor.Yellow;
-                Console.WriteLine("Do you want to get paid for this parking time?");
-                Console.SetCursorPosition(38, 15);
-                Console.WriteLine("1- Yes");
-                Console.SetCursorPosition(38, 16);
-                Console.WriteLine("2- No");
-                int choose = int.Parse(Console.ReadLine());
-                if (choose == 1)
-                {
-                    check = false;
-                }
-                else if (choose == 2)
-                {
-                    vehicle.TotalCost = -1;
-                    check = false;
-                }
-                else
-                {
-                    Console.Clear();
-                    Console.SetCursorPosition(38, 13);
-                    Console.WriteLine("Invalid entry! You have to enter a number 1 or 2");
-                    Console.SetCursorPosition(38, 14);
-                    Console.Write("Press ");
-                    Console.ForegroundColor = ConsoleColor.Green;
-                    Console.Write("\"ENTER\" ");
-                    Console.ForegroundColor = ConsoleColor.Yellow;
-                    Console.Write("to try again...");
-                    Console.ResetColor();
-                    Console.ReadLine();
-                }
+                vehicle.TotalCost = -1;
             }
+
             bool isAdded = vehicleManager.Delete(vehicle);
+
             if (isAdded)
             {
                 vehicle = vehicleManager.GetDeletedVehicle(vehicle);
-                Console.Clear();
-                Console.SetCursorPosition(38, 11);
-                Console.WriteLine("Vehicle with registration number \"{0}\" was succesfully removed", vehicle.LicensePlate);
-                Console.SetCursorPosition(38, 13);
-                Console.WriteLine("Arrival: {0}", vehicle.ArrivalTime);
-                Console.SetCursorPosition(38, 14);
-                Console.WriteLine("Total parking time: {0} days, {1} hours, {2} minutes", vehicle.ParkedTime.Days, vehicle.ParkedTime.Hours, vehicle.ParkedTime.Minutes);
-                Console.SetCursorPosition(38, 16);
-                Console.WriteLine("Total parking fee: {0:c}", vehicle.TotalCost);
-                Console.ReadLine();
+                return vehicle;
             }
+            return null;
         }
         public void MoveVehicle()
         {
@@ -343,7 +289,7 @@ namespace ConsoleUI
                     }
                 }
                 Console.BackgroundColor = ConsoleColor.DarkRed;
-                Console.WriteLine("{0}: EMPTY EMPTY",i);
+                Console.WriteLine("{0}: EMPTY EMPTY", i);
             }
             Console.ReadLine();
         }
@@ -356,7 +302,7 @@ namespace ConsoleUI
 
             foreach (var p in vehicles)
             {
-                Console.WriteLine("{0}: {1} Kč", p.ArrivalTime,p.TotalCost);
+                Console.WriteLine("{0}: {1} Kč", p.ArrivalTime, p.TotalCost);
             }
             Console.ReadLine();
         }
@@ -385,7 +331,7 @@ namespace ConsoleUI
                 {
                     break;
                 }
-                Console.WriteLine("MoveVehicle Mc: {0} from > {1} to the new place > {2}",vehicle.LicensePlate,vehicle.OldSpotNumber,vehicle.SpotNumber);
+                Console.WriteLine("MoveVehicle Mc: {0} from > {1} to the new place > {2}", vehicle.LicensePlate, vehicle.OldSpotNumber, vehicle.SpotNumber);
                 Console.WriteLine();
             }
             Console.ReadLine();
@@ -465,7 +411,7 @@ namespace ConsoleUI
             return licansePlate;
         }
         //Calculate price
-        public static decimal PriceCalculate(Vehicle vehicle)
+        public decimal PriceCalculate(Vehicle vehicle)
         {
             decimal price = 0;
             int hour;

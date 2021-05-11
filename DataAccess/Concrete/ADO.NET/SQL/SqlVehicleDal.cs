@@ -36,10 +36,7 @@ namespace DataAccess.Concrete.ADO.NET.SQL
                 }
                 catch (Exception e)
                 {
-                    Console.SetCursorPosition(38, 15);
-                    //Get database throw text. throw number 50002,50003,50003,50004
-                    Console.WriteLine(e.Message.ToString());
-                    Console.ReadLine();
+                    throw new Exception(e.Message);
                 }
             }
             return rowsAffected;

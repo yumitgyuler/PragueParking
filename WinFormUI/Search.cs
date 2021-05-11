@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Business;
+using Entities.Concrete;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,27 +14,26 @@ namespace WinFormUI
 {
     public partial class Search : Form
     {
+        static string connectionString = @"Data Source=AMANDASDATOR\SQLEXPRESS;Initial Catalog=PPDBYumitGyuler;Integrated Security=True";
+        Methods methods = new Methods(connectionString);
         public Search()
         {
             InitializeComponent();
         }
 
-        public void SearchVehicle()
+        private void btnSearch_Click(object sender, EventArgs e)
         {
-            //string licansePlate = GetLicensePlate();
-            //Vehicle vehicle = new Vehicle(licansePlate);
-            ////Get back vehicle from database
-            //vehicle = vehicleManager.GetVehicleByLicensePlate(vehicle);
-            //Console.Clear();
-            //Console.SetCursorPosition(38, 13);
-            //Console.WriteLine("{0} with license plate \"{1}\" is parked at spot {2}", vehicle.VehicleType, vehicle.LicensePlate, vehicle.SpotNumber);
-            //Console.SetCursorPosition(38, 15);
-            //Console.WriteLine("Arrival: {0}", vehicle.ArrivalTime);
-            //Console.SetCursorPosition(38, 17);
-            //Console.WriteLine("Total parking time: {0} days, {1} hours, {2} minutes", vehicle.ParkedTime.Days, vehicle.ParkedTime.Hours, vehicle.ParkedTime.Minutes);
-            //Console.SetCursorPosition(38, 19);
-            //Console.WriteLine("Total parking fee: {0:c}", PriceCalculate(vehicle));
-            //Console.ReadLine();
+            string licansePlate = textBox1.Text;
+            Vehicle vehicle = methods.SearchVehicle(licansePlate);
+            //Get back vehicle from database
+            decimal price = methods.PriceCalculate(vehicle);
+
+            lblVehicleType.Text = vehicle.VehicleType.ToString();
+            lblLicensePlate.Text = vehicle.LicensePlate.ToString();
+            lblArrival.Text = vehicle.ArrivalTime.ToString();
+            lblParkingFee.Text = price.ToString("C2");
+            lblParkingTime.Text = vehicle.ParkedTime.Days.ToString() + "D " + vehicle.ParkedTime.Hours.ToString() + "H " + vehicle.ParkedTime.Minutes.ToString() + "M";
+            lblSpot.Text = vehicle.SpotNumber.ToString();
         }
     }
 }

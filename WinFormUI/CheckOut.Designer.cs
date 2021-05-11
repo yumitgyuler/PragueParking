@@ -29,98 +29,105 @@ namespace WinFormUI
         /// </summary>
         private void InitializeComponent()
         {
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.rdbtnRecievePayment = new System.Windows.Forms.RadioButton();
+            this.rdbtnDontRecievePayment = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblRemoved = new System.Windows.Forms.Label();
+            this.lblArrival = new System.Windows.Forms.Label();
+            this.lblParkingTime = new System.Windows.Forms.Label();
+            this.lblParkingFee = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtLicensePlate = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // radioButton1
+            // rdbtnRecievePayment
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.radioButton1.Location = new System.Drawing.Point(379, 51);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(60, 27);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Yes";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rdbtnRecievePayment.AutoSize = true;
+            this.rdbtnRecievePayment.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbtnRecievePayment.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.rdbtnRecievePayment.Location = new System.Drawing.Point(505, 63);
+            this.rdbtnRecievePayment.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdbtnRecievePayment.Name = "rdbtnRecievePayment";
+            this.rdbtnRecievePayment.Size = new System.Drawing.Size(74, 33);
+            this.rdbtnRecievePayment.TabIndex = 0;
+            this.rdbtnRecievePayment.TabStop = true;
+            this.rdbtnRecievePayment.Text = "Yes";
+            this.rdbtnRecievePayment.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // rdbtnDontRecievePayment
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.radioButton2.Location = new System.Drawing.Point(459, 51);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(54, 27);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "No";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rdbtnDontRecievePayment.AutoSize = true;
+            this.rdbtnDontRecievePayment.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbtnDontRecievePayment.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.rdbtnDontRecievePayment.Location = new System.Drawing.Point(612, 63);
+            this.rdbtnDontRecievePayment.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdbtnDontRecievePayment.Name = "rdbtnDontRecievePayment";
+            this.rdbtnDontRecievePayment.Size = new System.Drawing.Size(67, 33);
+            this.rdbtnDontRecievePayment.TabIndex = 1;
+            this.rdbtnDontRecievePayment.TabStop = true;
+            this.rdbtnDontRecievePayment.Text = "No";
+            this.rdbtnDontRecievePayment.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(22, 53);
+            this.label1.Location = new System.Drawing.Point(29, 65);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(332, 23);
+            this.label1.Size = new System.Drawing.Size(415, 29);
             this.label1.TabIndex = 2;
             this.label1.Text = "Do you want to receive payment?";
             // 
-            // label2
+            // lblRemoved
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(22, 171);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(666, 23);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Vehicle with registration number \"HJS404\" was succesfully removed";
+            this.lblRemoved.AutoSize = true;
+            this.lblRemoved.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRemoved.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblRemoved.Location = new System.Drawing.Point(29, 210);
+            this.lblRemoved.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblRemoved.Name = "lblRemoved";
+            this.lblRemoved.Size = new System.Drawing.Size(824, 29);
+            this.lblRemoved.TabIndex = 3;
+            this.lblRemoved.Text = "Vehicle with registration number \"HJS404\" was succesfully removed";
             // 
-            // label3
+            // lblArrival
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(22, 211);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(203, 23);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Arrival: 2021-05-01";
+            this.lblArrival.AutoSize = true;
+            this.lblArrival.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblArrival.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblArrival.Location = new System.Drawing.Point(29, 260);
+            this.lblArrival.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblArrival.Name = "lblArrival";
+            this.lblArrival.Size = new System.Drawing.Size(250, 29);
+            this.lblArrival.TabIndex = 4;
+            this.lblArrival.Text = "Arrival: 2021-05-01";
             // 
-            // label4
+            // lblParkingTime
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(22, 253);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(459, 23);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Total parking time: 5 days, 1 hours, 2 minutes";
+            this.lblParkingTime.AutoSize = true;
+            this.lblParkingTime.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblParkingTime.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblParkingTime.Location = new System.Drawing.Point(29, 311);
+            this.lblParkingTime.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblParkingTime.Name = "lblParkingTime";
+            this.lblParkingTime.Size = new System.Drawing.Size(567, 29);
+            this.lblParkingTime.TabIndex = 5;
+            this.lblParkingTime.Text = "Total parking time: 5 days, 1 hours, 2 minutes";
             // 
-            // label5
+            // lblParkingFee
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(24, 294);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(254, 23);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "Total parking fee: 2500kr";
+            this.lblParkingFee.AutoSize = true;
+            this.lblParkingFee.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblParkingFee.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblParkingFee.Location = new System.Drawing.Point(32, 362);
+            this.lblParkingFee.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblParkingFee.Name = "lblParkingFee";
+            this.lblParkingFee.Size = new System.Drawing.Size(313, 29);
+            this.lblParkingFee.TabIndex = 6;
+            this.lblParkingFee.Text = "Total parking fee: 2500kr";
             // 
             // btnSearch
             // 
@@ -129,48 +136,53 @@ namespace WinFormUI
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearch.Font = new System.Drawing.Font("Verdana", 10F);
             this.btnSearch.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnSearch.Location = new System.Drawing.Point(320, 94);
+            this.btnSearch.Location = new System.Drawing.Point(427, 116);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(95, 23);
+            this.btnSearch.Size = new System.Drawing.Size(127, 28);
             this.btnSearch.TabIndex = 9;
             this.btnSearch.Text = "Check Out";
             this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // textBox1
+            // txtLicensePlate
             // 
-            this.textBox1.Location = new System.Drawing.Point(214, 96);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 8;
+            this.txtLicensePlate.Location = new System.Drawing.Point(285, 118);
+            this.txtLicensePlate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtLicensePlate.Name = "txtLicensePlate";
+            this.txtLicensePlate.Size = new System.Drawing.Size(132, 22);
+            this.txtLicensePlate.TabIndex = 8;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label6.Location = new System.Drawing.Point(21, 94);
+            this.label6.Location = new System.Drawing.Point(28, 116);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(196, 23);
+            this.label6.Size = new System.Drawing.Size(242, 29);
             this.label6.TabIndex = 7;
             this.label6.Text = "Enter license plate:";
             // 
             // CheckOut
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.btnSearch);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtLicensePlate);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblParkingFee);
+            this.Controls.Add(this.lblParkingTime);
+            this.Controls.Add(this.lblArrival);
+            this.Controls.Add(this.lblRemoved);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.rdbtnDontRecievePayment);
+            this.Controls.Add(this.rdbtnRecievePayment);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "CheckOut";
             this.Text = "CheckOut";
             this.ResumeLayout(false);
@@ -180,15 +192,15 @@ namespace WinFormUI
 
         #endregion
 
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton rdbtnRecievePayment;
+        private System.Windows.Forms.RadioButton rdbtnDontRecievePayment;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblRemoved;
+        private System.Windows.Forms.Label lblArrival;
+        private System.Windows.Forms.Label lblParkingTime;
+        private System.Windows.Forms.Label lblParkingFee;
         private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtLicensePlate;
         private System.Windows.Forms.Label label6;
     }
 }

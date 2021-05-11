@@ -38,12 +38,12 @@ namespace WinFormUI
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
+            this.lblLicensePlate = new System.Windows.Forms.Label();
+            this.lblSpot = new System.Windows.Forms.Label();
+            this.lblParkingTime = new System.Windows.Forms.Label();
+            this.lblVehicleType = new System.Windows.Forms.Label();
+            this.lblArrival = new System.Windows.Forms.Label();
+            this.lblParkingFee = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -51,17 +51,19 @@ namespace WinFormUI
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(164, 101);
+            this.label1.Location = new System.Drawing.Point(219, 124);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(196, 23);
+            this.label1.Size = new System.Drawing.Size(242, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Enter license plate:";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(357, 103);
+            this.textBox1.Location = new System.Drawing.Point(476, 127);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.Size = new System.Drawing.Size(132, 22);
             this.textBox1.TabIndex = 1;
             // 
             // btnSearch
@@ -71,21 +73,24 @@ namespace WinFormUI
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearch.Font = new System.Drawing.Font("Verdana", 10F);
             this.btnSearch.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnSearch.Location = new System.Drawing.Point(463, 101);
+            this.btnSearch.Location = new System.Drawing.Point(617, 124);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(95, 23);
+            this.btnSearch.Size = new System.Drawing.Size(127, 28);
             this.btnSearch.TabIndex = 2;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(470, 266);
+            this.label3.Location = new System.Drawing.Point(73, 327);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(89, 23);
+            this.label3.Size = new System.Drawing.Size(108, 29);
             this.label3.TabIndex = 4;
             this.label3.Text = "Arrival: ";
             // 
@@ -94,9 +99,10 @@ namespace WinFormUI
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(55, 315);
+            this.label4.Location = new System.Drawing.Point(73, 388);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(193, 23);
+            this.label4.Size = new System.Drawing.Size(237, 29);
             this.label4.TabIndex = 5;
             this.label4.Text = "Total parking time:";
             // 
@@ -105,9 +111,10 @@ namespace WinFormUI
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(470, 315);
+            this.label5.Location = new System.Drawing.Point(73, 267);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(180, 23);
+            this.label5.Size = new System.Drawing.Size(221, 29);
             this.label5.TabIndex = 6;
             this.label5.Text = "Total parking fee:";
             // 
@@ -116,9 +123,10 @@ namespace WinFormUI
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label6.Location = new System.Drawing.Point(54, 217);
+            this.label6.Location = new System.Drawing.Point(627, 388);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(138, 23);
+            this.label6.Size = new System.Drawing.Size(171, 29);
             this.label6.TabIndex = 7;
             this.label6.Text = "Vehicle Type:";
             // 
@@ -127,9 +135,10 @@ namespace WinFormUI
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label7.Location = new System.Drawing.Point(470, 217);
+            this.label7.Location = new System.Drawing.Point(627, 267);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(143, 23);
+            this.label7.Size = new System.Drawing.Size(177, 29);
             this.label7.TabIndex = 8;
             this.label7.Text = "License Plate:";
             // 
@@ -138,90 +147,97 @@ namespace WinFormUI
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label8.Location = new System.Drawing.Point(55, 266);
+            this.label8.Location = new System.Drawing.Point(627, 327);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(70, 23);
+            this.label8.Size = new System.Drawing.Size(87, 29);
             this.label8.TabIndex = 9;
             this.label8.Text = "Spot: ";
             // 
-            // label2
+            // lblLicensePlate
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label2.Location = new System.Drawing.Point(619, 217);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(82, 23);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "HJS404";
+            this.lblLicensePlate.AutoSize = true;
+            this.lblLicensePlate.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLicensePlate.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.lblLicensePlate.Location = new System.Drawing.Point(825, 267);
+            this.lblLicensePlate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblLicensePlate.Name = "lblLicensePlate";
+            this.lblLicensePlate.Size = new System.Drawing.Size(26, 36);
+            this.lblLicensePlate.TabIndex = 11;
+            this.lblLicensePlate.Text = " ";
             // 
-            // label9
+            // lblSpot
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label9.Location = new System.Drawing.Point(119, 266);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(22, 23);
-            this.label9.TabIndex = 12;
-            this.label9.Text = "5";
+            this.lblSpot.AutoSize = true;
+            this.lblSpot.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSpot.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.lblSpot.Location = new System.Drawing.Point(713, 327);
+            this.lblSpot.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblSpot.Name = "lblSpot";
+            this.lblSpot.Size = new System.Drawing.Size(21, 29);
+            this.lblSpot.TabIndex = 12;
+            this.lblSpot.Text = " ";
             // 
-            // label10
+            // lblParkingTime
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label10.Location = new System.Drawing.Point(247, 315);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(97, 23);
-            this.label10.TabIndex = 13;
-            this.label10.Text = "150 hour";
+            this.lblParkingTime.AutoSize = true;
+            this.lblParkingTime.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblParkingTime.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.lblParkingTime.Location = new System.Drawing.Point(329, 388);
+            this.lblParkingTime.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblParkingTime.Name = "lblParkingTime";
+            this.lblParkingTime.Size = new System.Drawing.Size(26, 36);
+            this.lblParkingTime.TabIndex = 13;
+            this.lblParkingTime.Text = " ";
             // 
-            // label11
+            // lblVehicleType
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label11.Location = new System.Drawing.Point(188, 217);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(39, 23);
-            this.label11.TabIndex = 14;
-            this.label11.Text = "MC";
+            this.lblVehicleType.AutoSize = true;
+            this.lblVehicleType.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVehicleType.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.lblVehicleType.Location = new System.Drawing.Point(806, 388);
+            this.lblVehicleType.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblVehicleType.Name = "lblVehicleType";
+            this.lblVehicleType.Size = new System.Drawing.Size(21, 29);
+            this.lblVehicleType.TabIndex = 14;
+            this.lblVehicleType.Text = " ";
             // 
-            // label12
+            // lblArrival
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label12.Location = new System.Drawing.Point(550, 266);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(124, 23);
-            this.label12.TabIndex = 15;
-            this.label12.Text = "2021-01-02";
+            this.lblArrival.AutoSize = true;
+            this.lblArrival.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblArrival.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.lblArrival.Location = new System.Drawing.Point(179, 327);
+            this.lblArrival.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblArrival.Name = "lblArrival";
+            this.lblArrival.Size = new System.Drawing.Size(21, 29);
+            this.lblArrival.TabIndex = 15;
+            this.lblArrival.Text = " ";
             // 
-            // label13
+            // lblParkingFee
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label13.Location = new System.Drawing.Point(643, 315);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(91, 23);
-            this.label13.TabIndex = 16;
-            this.label13.Text = "2,500 kr";
+            this.lblParkingFee.AutoSize = true;
+            this.lblParkingFee.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblParkingFee.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.lblParkingFee.Location = new System.Drawing.Point(303, 267);
+            this.lblParkingFee.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblParkingFee.Name = "lblParkingFee";
+            this.lblParkingFee.Size = new System.Drawing.Size(21, 29);
+            this.lblParkingFee.TabIndex = 16;
+            this.lblParkingFee.Text = " ";
             // 
             // Search
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label2);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.lblParkingFee);
+            this.Controls.Add(this.lblArrival);
+            this.Controls.Add(this.lblVehicleType);
+            this.Controls.Add(this.lblParkingTime);
+            this.Controls.Add(this.lblSpot);
+            this.Controls.Add(this.lblLicensePlate);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -232,6 +248,7 @@ namespace WinFormUI
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Search";
             this.Text = "Search";
             this.ResumeLayout(false);
@@ -250,11 +267,11 @@ namespace WinFormUI
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label lblLicensePlate;
+        private System.Windows.Forms.Label lblSpot;
+        private System.Windows.Forms.Label lblParkingTime;
+        private System.Windows.Forms.Label lblVehicleType;
+        private System.Windows.Forms.Label lblArrival;
+        private System.Windows.Forms.Label lblParkingFee;
     }
 }

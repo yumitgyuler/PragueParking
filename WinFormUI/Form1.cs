@@ -72,7 +72,7 @@ namespace WinFormUI
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            this.Location = Screen.AllScreens[1].WorkingArea.Location;
+            //this.Location = Screen.AllScreens[1].WorkingArea.Location;
             this.StartPosition = FormStartPosition.CenterScreen;
         }
     }

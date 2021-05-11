@@ -3,6 +3,7 @@ using Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -14,7 +15,7 @@ namespace WinFormUI
 {
     public partial class Search : Form
     {
-        static string connectionString = @"Data Source=AMANDASDATOR\SQLEXPRESS;Initial Catalog=PPDBYumitGyuler;Integrated Security=True";
+        static string connectionString = ConfigurationManager.ConnectionStrings["MyconnectionString"].ConnectionString;
         Methods methods = new Methods(connectionString);
         public Search()
         {

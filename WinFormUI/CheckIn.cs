@@ -9,12 +9,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Configuration;
 
 namespace WinFormUI
 {
     public partial class CheckIn : Form
     {
-        static string connectionString = @"Data Source=AMANDASDATOR\SQLEXPRESS;Initial Catalog=PPDBYumitGyuler;Integrated Security=True";
+        static string connectionString = ConfigurationManager.ConnectionStrings["MyconnectionString"].ConnectionString;
         Methods methods = new Methods(connectionString);
         public CheckIn()
         {
@@ -23,7 +24,7 @@ namespace WinFormUI
 
         private void btnCheckIn_Click(object sender, EventArgs e)
         {
-            Vehicle vehicle;
+                Vehicle vehicle;
             vehicle = new Vehicle(txtLicensePlate.Text);
 
             if (rdbtnCar.Checked)

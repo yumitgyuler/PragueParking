@@ -37,9 +37,16 @@ namespace WinFormUI
 
             if (vehicle != null)
             {
-                lblArrival.Text = $"Vehicle with registration number {vehicle.LicensePlate} was succesfully removed";
-                
+                lblRemoved.Text = $"Vehicle with registration number {vehicle.LicensePlate} was succesfully removed";
+                lblArrival.Text = $"Arrival: {vehicle.ArrivalTime}";
+                lblParkingTime.Text = $"Parked for: {vehicle.ParkedTime}";
+                lblParkingFee.Text = $"Parking fee: {vehicle.TotalCost.ToString("C2")}";
             }
+
+        }
+
+        private void CheckOut_Load(object sender, EventArgs e)
+        {
 
         }
     }

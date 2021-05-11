@@ -47,7 +47,7 @@ namespace WinFormUI
             this.rdbtnRecievePayment.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbtnRecievePayment.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.rdbtnRecievePayment.Location = new System.Drawing.Point(505, 63);
-            this.rdbtnRecievePayment.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdbtnRecievePayment.Margin = new System.Windows.Forms.Padding(4);
             this.rdbtnRecievePayment.Name = "rdbtnRecievePayment";
             this.rdbtnRecievePayment.Size = new System.Drawing.Size(74, 33);
             this.rdbtnRecievePayment.TabIndex = 0;
@@ -61,7 +61,7 @@ namespace WinFormUI
             this.rdbtnDontRecievePayment.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbtnDontRecievePayment.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.rdbtnDontRecievePayment.Location = new System.Drawing.Point(612, 63);
-            this.rdbtnDontRecievePayment.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdbtnDontRecievePayment.Margin = new System.Windows.Forms.Padding(4);
             this.rdbtnDontRecievePayment.Name = "rdbtnDontRecievePayment";
             this.rdbtnDontRecievePayment.Size = new System.Drawing.Size(67, 33);
             this.rdbtnDontRecievePayment.TabIndex = 1;
@@ -89,9 +89,8 @@ namespace WinFormUI
             this.lblRemoved.Location = new System.Drawing.Point(29, 210);
             this.lblRemoved.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRemoved.Name = "lblRemoved";
-            this.lblRemoved.Size = new System.Drawing.Size(824, 29);
+            this.lblRemoved.Size = new System.Drawing.Size(0, 29);
             this.lblRemoved.TabIndex = 3;
-            this.lblRemoved.Text = "Vehicle with registration number \"HJS404\" was succesfully removed";
             // 
             // lblArrival
             // 
@@ -101,9 +100,8 @@ namespace WinFormUI
             this.lblArrival.Location = new System.Drawing.Point(29, 260);
             this.lblArrival.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblArrival.Name = "lblArrival";
-            this.lblArrival.Size = new System.Drawing.Size(250, 29);
+            this.lblArrival.Size = new System.Drawing.Size(0, 29);
             this.lblArrival.TabIndex = 4;
-            this.lblArrival.Text = "Arrival: 2021-05-01";
             // 
             // lblParkingTime
             // 
@@ -113,9 +111,8 @@ namespace WinFormUI
             this.lblParkingTime.Location = new System.Drawing.Point(29, 311);
             this.lblParkingTime.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblParkingTime.Name = "lblParkingTime";
-            this.lblParkingTime.Size = new System.Drawing.Size(567, 29);
+            this.lblParkingTime.Size = new System.Drawing.Size(0, 29);
             this.lblParkingTime.TabIndex = 5;
-            this.lblParkingTime.Text = "Total parking time: 5 days, 1 hours, 2 minutes";
             // 
             // lblParkingFee
             // 
@@ -125,9 +122,8 @@ namespace WinFormUI
             this.lblParkingFee.Location = new System.Drawing.Point(32, 362);
             this.lblParkingFee.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblParkingFee.Name = "lblParkingFee";
-            this.lblParkingFee.Size = new System.Drawing.Size(313, 29);
+            this.lblParkingFee.Size = new System.Drawing.Size(0, 29);
             this.lblParkingFee.TabIndex = 6;
-            this.lblParkingFee.Text = "Total parking fee: 2500kr";
             // 
             // btnSearch
             // 
@@ -137,7 +133,7 @@ namespace WinFormUI
             this.btnSearch.Font = new System.Drawing.Font("Verdana", 10F);
             this.btnSearch.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnSearch.Location = new System.Drawing.Point(427, 116);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(4);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(127, 28);
             this.btnSearch.TabIndex = 9;
@@ -148,7 +144,7 @@ namespace WinFormUI
             // txtLicensePlate
             // 
             this.txtLicensePlate.Location = new System.Drawing.Point(285, 118);
-            this.txtLicensePlate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtLicensePlate.Margin = new System.Windows.Forms.Padding(4);
             this.txtLicensePlate.Name = "txtLicensePlate";
             this.txtLicensePlate.Size = new System.Drawing.Size(132, 22);
             this.txtLicensePlate.TabIndex = 8;
@@ -182,9 +178,10 @@ namespace WinFormUI
             this.Controls.Add(this.rdbtnDontRecievePayment);
             this.Controls.Add(this.rdbtnRecievePayment);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CheckOut";
             this.Text = "CheckOut";
+            this.Load += new System.EventHandler(this.CheckOut_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -33,6 +33,8 @@ namespace WinFormUI
             this.licensePlate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.vehicleType = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.parkingSpot = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.arrival = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.parkingCost = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // listView1
@@ -42,20 +44,25 @@ namespace WinFormUI
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.licensePlate,
             this.vehicleType,
-            this.parkingSpot});
+            this.parkingSpot,
+            this.arrival,
+            this.parkingCost});
             this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listView1.ForeColor = System.Drawing.SystemColors.Window;
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(0, 0);
+            this.listView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(800, 450);
+            this.listView1.Size = new System.Drawing.Size(1067, 554);
             this.listView1.TabIndex = 1;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // licensePlate
             // 
             this.licensePlate.Text = "License Plate";
-            this.licensePlate.Width = 107;
+            this.licensePlate.Width = 105;
             // 
             // vehicleType
             // 
@@ -65,16 +72,27 @@ namespace WinFormUI
             // parkingSpot
             // 
             this.parkingSpot.Text = "Parking spot";
-            this.parkingSpot.Width = 139;
+            this.parkingSpot.Width = 195;
+            // 
+            // arrival
+            // 
+            this.arrival.Text = "Arrival";
+            this.arrival.Width = 219;
+            // 
+            // parkingCost
+            // 
+            this.parkingCost.Text = "Parking cost";
+            this.parkingCost.Width = 156;
             // 
             // ShowAll
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.listView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ShowAll";
             this.Text = "ShowAll";
             this.ResumeLayout(false);
@@ -87,5 +105,7 @@ namespace WinFormUI
         private System.Windows.Forms.ColumnHeader licensePlate;
         private System.Windows.Forms.ColumnHeader vehicleType;
         private System.Windows.Forms.ColumnHeader parkingSpot;
+        private System.Windows.Forms.ColumnHeader arrival;
+        private System.Windows.Forms.ColumnHeader parkingCost;
     }
 }

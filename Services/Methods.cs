@@ -258,40 +258,41 @@ namespace Business
             }
 
         }
-        public void GetList()
+        public List<Vehicle> GetList()
         {
-            Console.Clear();
+            //Console.Clear();
             List<Vehicle> vehicles = vehicleManager.GetList();
-            Console.BackgroundColor = ConsoleColor.Magenta;
-            Console.WriteLine("CAR");
-            Console.BackgroundColor = ConsoleColor.DarkBlue;
-            Console.WriteLine("MC");
-            Console.BackgroundColor = ConsoleColor.DarkRed;
-            Console.WriteLine("EMPTY");
-            Console.WriteLine();
-            Console.WriteLine();
-            for (int i = 1; i < 101; i++)
-            {
-                for (int j = 1; j < vehicles.Count; j++)
-                {
-                    if (vehicles[j].SpotNumber == i)
-                    {
-                        if (vehicles[j].VehicleTypeId == 1)
-                        {
-                            Console.BackgroundColor = ConsoleColor.Magenta;
-                            Console.WriteLine("{0}: {1} {2}", vehicles[j].SpotNumber, vehicles[j].LicensePlate, vehicles[j].VehicleType);
-                        }
-                        else
-                        {
-                            Console.BackgroundColor = ConsoleColor.DarkBlue;
-                            Console.WriteLine("{0}: {1} {2}", vehicles[j].SpotNumber, vehicles[j].LicensePlate, vehicles[j].VehicleType);
-                        }
-                    }
-                }
-                Console.BackgroundColor = ConsoleColor.DarkRed;
-                Console.WriteLine("{0}: EMPTY EMPTY", i);
-            }
-            Console.ReadLine();
+            return vehicles;
+            //Console.BackgroundColor = ConsoleColor.Magenta;
+            //Console.WriteLine("CAR");
+            //Console.BackgroundColor = ConsoleColor.DarkBlue;
+            //Console.WriteLine("MC");
+            //Console.BackgroundColor = ConsoleColor.DarkRed;
+            //Console.WriteLine("EMPTY");
+            //Console.WriteLine();
+            //Console.WriteLine();
+            //for (int i = 1; i < 101; i++)
+            //{
+            //    for (int j = 1; j < vehicles.Count; j++)
+            //    {
+            //        if (vehicles[j].SpotNumber == i)
+            //        {
+            //            if (vehicles[j].VehicleTypeId == 1)
+            //            {
+            //                Console.BackgroundColor = ConsoleColor.Magenta;
+            //                Console.WriteLine("{0}: {1} {2}", vehicles[j].SpotNumber, vehicles[j].LicensePlate, vehicles[j].VehicleType);
+            //            }
+            //            else
+            //            {
+            //                Console.BackgroundColor = ConsoleColor.DarkBlue;
+            //                Console.WriteLine("{0}: {1} {2}", vehicles[j].SpotNumber, vehicles[j].LicensePlate, vehicles[j].VehicleType);
+            //            }
+            //        }
+            //    }
+            //    Console.BackgroundColor = ConsoleColor.DarkRed;
+            //    Console.WriteLine("{0}: EMPTY EMPTY", i);
+            //}
+            //Console.ReadLine();
         }
         public void RevenuePerDay()
         {

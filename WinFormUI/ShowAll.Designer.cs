@@ -51,7 +51,7 @@ namespace WinFormUI
             this.listView1.ForeColor = System.Drawing.SystemColors.Window;
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(0, 0);
-            this.listView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listView1.Margin = new System.Windows.Forms.Padding(4);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(1067, 554);
             this.listView1.TabIndex = 1;
@@ -72,12 +72,12 @@ namespace WinFormUI
             // parkingSpot
             // 
             this.parkingSpot.Text = "Parking spot";
-            this.parkingSpot.Width = 195;
+            this.parkingSpot.Width = 121;
             // 
             // arrival
             // 
             this.arrival.Text = "Arrival";
-            this.arrival.Width = 219;
+            this.arrival.Width = 183;
             // 
             // parkingCost
             // 
@@ -92,7 +92,7 @@ namespace WinFormUI
             this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.listView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ShowAll";
             this.Text = "ShowAll";
             this.ResumeLayout(false);

@@ -27,6 +27,8 @@ namespace WinFormUI
             List<Vehicle> vehicles = methods.GetList();
             foreach (Vehicle vehicle in vehicles)
             {
+                if (vehicle.VehicleTypeId == 1) vehicle.CostByHour = 10;
+                else if (vehicle.VehicleTypeId == 2) vehicle.CostByHour = 20;
                 decimal price = methods.PriceCalculate(vehicle);
                 listView1.Items.Add(new ListViewItem(new string[] { vehicle.LicensePlate, vehicle.VehicleType.ToString(),
                     vehicle.SpotNumber.ToString(), vehicle.ArrivalTime.ToString(), price.ToString("C2")}));

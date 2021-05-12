@@ -82,7 +82,7 @@ namespace Business
                         ParkedMoreThan48h();
                         break;
                     case "9":
-                        GetRevenue();
+                        //GetRevenue();
                         break;
                     case "10":
                         ExitText();
@@ -106,33 +106,13 @@ namespace Business
             }
         }
 
-        public void GetRevenue()
+        public List<Vehicle> GetRevenue(string startDate, string endDate)
         {
-            Console.Clear();
-
-            string startDate = GetDate("start date");
-            string endDate = GetDate("end date");
-            Console.Clear();
-            List<Vehicle> vehicles = null;
-
-            vehicles = vehicleManager.GetRevenue(startDate, endDate);
-
-            foreach (var p in vehicles)
-            {
-                Console.WriteLine("{0}: {1} Kč", p.ArrivalTime, p.TotalCost);
-            }
-
-            if (startDate != endDate)
-            {
-                decimal avarage = vehicleManager.GetAverage(startDate, endDate);
-                Console.WriteLine("Avarage per day: {0}", avarage);
-            }
-            Console.ReadLine();
+            return vehicleManager.GetRevenue(startDate, endDate);
         }
 
         public string GetDate(string dateText)
         {
-            Console.Clear();
             bool isCorrect = false;
             string dateInput = "";
             while (!isCorrect)
@@ -204,7 +184,7 @@ namespace Business
         }
         public bool MoveVehicle(string licansePlate, int spot)
         {
-            return  vehicleManager.MoveVehicle(licansePlate, spot);
+            return vehicleManager.MoveVehicle(licansePlate, spot);
         }
         public List<Vehicle> GetList()
         {
@@ -242,39 +222,32 @@ namespace Business
             //}
             //Console.ReadLine();
         }
-        public void RevenuePerDay()
+        public List<Vehicle> RevenuePerDay()
         {
-            Console.Clear();
             List<Vehicle> vehicles = null;
 
             vehicles = vehicleManager.RevenuePerDay();
 
-            foreach (var p in vehicles)
-            {
-                Console.WriteLine("{0}: {1} Kč", p.ArrivalTime, p.TotalCost);
-            }
-            Console.ReadLine();
-        }
-        public void ParkedMoreThan48h()
-        {
-            Console.Clear();
-            List<Vehicle> vehicles = vehicleManager.HistoryList();
+            return vehicles;
 
+        }
+        public List<Vehicle> ParkedMoreThan48h()
+        {
+            List<Vehicle> vehicles = vehicleManager.GetList();
+            List<Vehicle> parkedMoreThan48Hours = new List<Vehicle>();
             foreach (var p in vehicles)
             {
                 if (p.ParkedTime.TotalMinutes > 2880)
                 {
-                    Console.WriteLine(p.LicensePlate);
+                    parkedMoreThan48Hours.Add(p);
                 }
             }
-            Console.ReadLine();
+
+            return parkedMoreThan48Hours;
         }
         public List<Vehicle> OptimizeParking()
         {
-            
-            
-                return vehicleManager.OptimizeMc();
-                       
+            return vehicleManager.OptimizeMc();
         }
         public int GetVehicleTyp()
         {

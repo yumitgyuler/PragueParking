@@ -68,6 +68,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="MoreThan48Hours.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MoreThan48Hours.Designer.cs">
+      <DependentUpon>MoreThan48Hours.cs</DependentUpon>
+    </Compile>
     <Compile Include="Move.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +94,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RevenueInterval.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RevenueInterval.Designer.cs">
+      <DependentUpon>RevenueInterval.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RevenuePerDay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RevenuePerDay.Designer.cs">
+      <DependentUpon>RevenuePerDay.cs</DependentUpon>
+    </Compile>
     <Compile Include="Search.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +127,9 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MoreThan48Hours.resx">
+      <DependentUpon>MoreThan48Hours.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Move.resx">
       <DependentUpon>Move.cs</DependentUpon>
     </EmbeddedResource>
@@ -127,6 +148,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RevenueInterval.resx">
+      <DependentUpon>RevenueInterval.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RevenuePerDay.resx">
+      <DependentUpon>RevenuePerDay.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Search.resx">
       <DependentUpon>Search.cs</DependentUpon>
     </EmbeddedResource>

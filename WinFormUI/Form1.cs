@@ -113,5 +113,23 @@ namespace WinFormUI
             Optimize optimize = new Optimize();
             LoadForm(optimize);
         }
+
+        private void btnShowRevenuePerDay_Click(object sender, EventArgs e)
+        {
+            RevenuePerDay revenuePerDay = new RevenuePerDay();
+            LoadForm(revenuePerDay);
+        }
+
+        private void btThan48_Click(object sender, EventArgs e)
+        {
+            MoreThan48Hours moreThan48Hours = new MoreThan48Hours();
+            LoadForm(moreThan48Hours);
+        }
+
+        private void btnShowInterval_Click(object sender, EventArgs e)
+        {
+            RevenueInterval revenueInterval = new RevenueInterval();
+            LoadForm(revenueInterval);
+        }
     }
 }

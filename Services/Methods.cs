@@ -67,10 +67,10 @@ namespace Business
                         //RemoveVehicle();
                         break;
                     case "4":
-                        MoveVehicle();
+                        //MoveVehicle();
                         break;
                     case "5":
-                        GetList();
+                        //GetList();
                         break;
                     case "6":
                         OptimizeParking();
@@ -202,61 +202,9 @@ namespace Business
             }
             return null;
         }
-        public void MoveVehicle()
+        public bool MoveVehicle(string licansePlate, int spot)
         {
-            bool checkInt = true;
-            int spot = 0;
-            string licansePlate = GetLicensePlate();
-            while (checkInt)
-            {
-                try
-                {
-                    Console.Clear();
-                    //ParkingListPrint();
-                    Console.ResetColor();
-                    Console.SetCursorPosition(45, 2);
-                    Console.ForegroundColor = ConsoleColor.Yellow;
-                    Console.Write("Where would you like to park \"{1-100}\": ");
-                    spot = int.Parse(Console.ReadLine()); //try cach
-                    if (spot < 1 || spot > 100)
-                    {
-                        throw new IndexOutOfRangeException();
-                    }
-                    checkInt = false;
-                }
-                catch (FormatException)
-                {
-                    Console.Clear();
-                    Console.ResetColor();
-                    Console.SetCursorPosition(45, 15);
-                    Console.ResetColor();
-                    Console.ForegroundColor = ConsoleColor.Yellow;
-                    Console.WriteLine("Invalid entry! You have to enter a number between 1 and 100");
-                    Console.ReadLine();
-                }
-                catch (IndexOutOfRangeException)
-                {
-                    Console.Clear();
-                    Console.ResetColor();
-                    Console.SetCursorPosition(45, 15);
-                    Console.ResetColor();
-                    Console.ForegroundColor = ConsoleColor.Yellow;
-                    Console.WriteLine("Invalid entry! You have to enter a number between 1 and 100");
-                    Console.ReadLine();
-                }
-            }
-            bool isMoved = vehicleManager.MoveVehicle(licansePlate, spot);
-            if (isMoved)
-            {
-                Console.Clear();
-                //ParkingListPrint();
-                Console.SetCursorPosition(45, 2);
-                Console.ResetColor();
-                Console.ForegroundColor = ConsoleColor.Yellow;
-                Console.WriteLine("Vehicle has been moved");
-                Console.ReadLine();
-            }
-
+            return  vehicleManager.MoveVehicle(licansePlate, spot);
         }
         public List<Vehicle> GetList()
         {
@@ -321,21 +269,12 @@ namespace Business
             }
             Console.ReadLine();
         }
-        public void OptimizeParking()
+        public List<Vehicle> OptimizeParking()
         {
-            Console.Clear();
-            Vehicle vehicle = null;
-            while (true)
-            {
-                vehicle = vehicleManager.OptimizeMc();
-                if (vehicle == null)
-                {
-                    break;
-                }
-                Console.WriteLine("MoveVehicle Mc: {0} from > {1} to the new place > {2}", vehicle.LicensePlate, vehicle.OldSpotNumber, vehicle.SpotNumber);
-                Console.WriteLine();
-            }
-            Console.ReadLine();
+            
+            
+                return vehicleManager.OptimizeMc();
+                       
         }
         public int GetVehicleTyp()
         {

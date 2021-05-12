@@ -107,5 +107,11 @@ namespace WinFormUI
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
         }
+
+        private void btnOptimizeParking_Click(object sender, EventArgs e)
+        {
+            Optimize optimize = new Optimize();
+            LoadForm(optimize);
+        }
     }
 }

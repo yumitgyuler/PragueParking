@@ -14,7 +14,7 @@ namespace DataAccess.Abstract
         int Delete(Vehicle vehicle);
         List<Vehicle> GetList();
         int MoveVehicle(string licansePlate, int spot);
-        Vehicle OptimizeMc();
+        List<Vehicle> OptimizeMc();
         List<Vehicle> RevenuePerDay();
         List<Vehicle> GetRevenue(string startDate, string endDate);
         List<Vehicle> HistoryList();

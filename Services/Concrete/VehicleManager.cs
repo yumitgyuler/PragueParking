@@ -27,10 +27,10 @@ namespace Business.Concrete
             int rowAffected = vehicleDal.Delete(vehicle);
             return rowAffected == 0 ? false : true;
         }
-        public Vehicle OptimizeMc()
+        public List<Vehicle> OptimizeMc()
         {
-           Vehicle vehicle = vehicleDal.OptimizeMc();
-           return vehicle;
+            return vehicleDal.OptimizeMc();
+    
         }
         public Vehicle GetDeletedVehicle(Vehicle vehicle)
         {

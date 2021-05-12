@@ -14,7 +14,7 @@ namespace Business.Abstract
         bool Delete(Vehicle vehicle);
         bool MoveVehicle(string licansePlate, int spot);
         List<Vehicle> GetList();
-        Vehicle OptimizeMc();
+        List<Vehicle> OptimizeMc();
         List<Vehicle> RevenuePerDay();
         List<Vehicle> HistoryList();
         List<Vehicle> GetRevenue(string startDate, string endDate);

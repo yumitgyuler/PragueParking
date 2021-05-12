@@ -55,9 +55,8 @@ namespace WinFormUI
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1267, 76);
+            this.panel1.Size = new System.Drawing.Size(950, 62);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
@@ -68,10 +67,9 @@ namespace WinFormUI
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(1205, 15);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Location = new System.Drawing.Point(904, 12);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(45, 38);
+            this.button1.Size = new System.Drawing.Size(34, 31);
             this.button1.TabIndex = 1;
             this.button1.Text = "X";
             this.button1.UseVisualStyleBackColor = true;
@@ -82,10 +80,9 @@ namespace WinFormUI
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(33, 25);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(25, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(221, 29);
+            this.label1.Size = new System.Drawing.Size(176, 23);
             this.label1.TabIndex = 0;
             this.label1.Text = "Prague Parking";
             this.label1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label1_MouseMove);
@@ -104,10 +101,9 @@ namespace WinFormUI
             this.panel2.Controls.Add(this.btnCheckIn);
             this.panel2.Controls.Add(this.btnSearch);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 76);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Location = new System.Drawing.Point(0, 62);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(267, 634);
+            this.panel2.Size = new System.Drawing.Size(200, 515);
             this.panel2.TabIndex = 1;
             // 
             // btnExit
@@ -118,10 +114,9 @@ namespace WinFormUI
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnExit.Location = new System.Drawing.Point(0, 579);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(4);
+            this.btnExit.Location = new System.Drawing.Point(0, 470);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(267, 55);
+            this.btnExit.Size = new System.Drawing.Size(200, 45);
             this.btnExit.TabIndex = 9;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = false;
@@ -135,10 +130,9 @@ namespace WinFormUI
             this.btnShowInterval.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnShowInterval.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnShowInterval.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnShowInterval.Location = new System.Drawing.Point(0, 440);
-            this.btnShowInterval.Margin = new System.Windows.Forms.Padding(4);
+            this.btnShowInterval.Location = new System.Drawing.Point(0, 360);
             this.btnShowInterval.Name = "btnShowInterval";
-            this.btnShowInterval.Size = new System.Drawing.Size(267, 55);
+            this.btnShowInterval.Size = new System.Drawing.Size(200, 45);
             this.btnShowInterval.TabIndex = 8;
             this.btnShowInterval.Text = "Show revenue per day or interval";
             this.btnShowInterval.UseVisualStyleBackColor = false;
@@ -151,10 +145,9 @@ namespace WinFormUI
             this.btThan48.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btThan48.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btThan48.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btThan48.Location = new System.Drawing.Point(0, 385);
-            this.btThan48.Margin = new System.Windows.Forms.Padding(4);
+            this.btThan48.Location = new System.Drawing.Point(0, 315);
             this.btThan48.Name = "btThan48";
-            this.btThan48.Size = new System.Drawing.Size(267, 55);
+            this.btThan48.Size = new System.Drawing.Size(200, 45);
             this.btThan48.TabIndex = 7;
             this.btThan48.Text = "Show parked vehicle more than 48h ";
             this.btThan48.UseVisualStyleBackColor = false;
@@ -167,10 +160,9 @@ namespace WinFormUI
             this.btnShowRevenuePerDay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnShowRevenuePerDay.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnShowRevenuePerDay.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnShowRevenuePerDay.Location = new System.Drawing.Point(0, 330);
-            this.btnShowRevenuePerDay.Margin = new System.Windows.Forms.Padding(4);
+            this.btnShowRevenuePerDay.Location = new System.Drawing.Point(0, 270);
             this.btnShowRevenuePerDay.Name = "btnShowRevenuePerDay";
-            this.btnShowRevenuePerDay.Size = new System.Drawing.Size(267, 55);
+            this.btnShowRevenuePerDay.Size = new System.Drawing.Size(200, 45);
             this.btnShowRevenuePerDay.TabIndex = 6;
             this.btnShowRevenuePerDay.Text = "Show revenue per day";
             this.btnShowRevenuePerDay.UseVisualStyleBackColor = false;
@@ -183,13 +175,13 @@ namespace WinFormUI
             this.btnOptimizeParking.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOptimizeParking.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOptimizeParking.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnOptimizeParking.Location = new System.Drawing.Point(0, 275);
-            this.btnOptimizeParking.Margin = new System.Windows.Forms.Padding(4);
+            this.btnOptimizeParking.Location = new System.Drawing.Point(0, 225);
             this.btnOptimizeParking.Name = "btnOptimizeParking";
-            this.btnOptimizeParking.Size = new System.Drawing.Size(267, 55);
+            this.btnOptimizeParking.Size = new System.Drawing.Size(200, 45);
             this.btnOptimizeParking.TabIndex = 5;
             this.btnOptimizeParking.Text = "Optimize Parking";
             this.btnOptimizeParking.UseVisualStyleBackColor = false;
+            this.btnOptimizeParking.Click += new System.EventHandler(this.btnOptimizeParking_Click);
             // 
             // btnDisplayAll
             // 
@@ -199,10 +191,9 @@ namespace WinFormUI
             this.btnDisplayAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDisplayAll.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDisplayAll.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnDisplayAll.Location = new System.Drawing.Point(0, 220);
-            this.btnDisplayAll.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDisplayAll.Location = new System.Drawing.Point(0, 180);
             this.btnDisplayAll.Name = "btnDisplayAll";
-            this.btnDisplayAll.Size = new System.Drawing.Size(267, 55);
+            this.btnDisplayAll.Size = new System.Drawing.Size(200, 45);
             this.btnDisplayAll.TabIndex = 4;
             this.btnDisplayAll.Text = "Display all";
             this.btnDisplayAll.UseVisualStyleBackColor = false;
@@ -216,10 +207,9 @@ namespace WinFormUI
             this.btnMoveVehicle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMoveVehicle.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMoveVehicle.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnMoveVehicle.Location = new System.Drawing.Point(0, 165);
-            this.btnMoveVehicle.Margin = new System.Windows.Forms.Padding(4);
+            this.btnMoveVehicle.Location = new System.Drawing.Point(0, 135);
             this.btnMoveVehicle.Name = "btnMoveVehicle";
-            this.btnMoveVehicle.Size = new System.Drawing.Size(267, 55);
+            this.btnMoveVehicle.Size = new System.Drawing.Size(200, 45);
             this.btnMoveVehicle.TabIndex = 3;
             this.btnMoveVehicle.Text = "Move vehicle";
             this.btnMoveVehicle.UseVisualStyleBackColor = false;
@@ -233,10 +223,9 @@ namespace WinFormUI
             this.btnCheckOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCheckOut.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCheckOut.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnCheckOut.Location = new System.Drawing.Point(0, 110);
-            this.btnCheckOut.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCheckOut.Location = new System.Drawing.Point(0, 90);
             this.btnCheckOut.Name = "btnCheckOut";
-            this.btnCheckOut.Size = new System.Drawing.Size(267, 55);
+            this.btnCheckOut.Size = new System.Drawing.Size(200, 45);
             this.btnCheckOut.TabIndex = 2;
             this.btnCheckOut.Text = "Check out";
             this.btnCheckOut.UseVisualStyleBackColor = false;
@@ -250,10 +239,9 @@ namespace WinFormUI
             this.btnCheckIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCheckIn.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCheckIn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnCheckIn.Location = new System.Drawing.Point(0, 55);
-            this.btnCheckIn.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCheckIn.Location = new System.Drawing.Point(0, 45);
             this.btnCheckIn.Name = "btnCheckIn";
-            this.btnCheckIn.Size = new System.Drawing.Size(267, 55);
+            this.btnCheckIn.Size = new System.Drawing.Size(200, 45);
             this.btnCheckIn.TabIndex = 1;
             this.btnCheckIn.Text = "Check in";
             this.btnCheckIn.UseVisualStyleBackColor = false;
@@ -268,9 +256,8 @@ namespace WinFormUI
             this.btnSearch.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnSearch.Location = new System.Drawing.Point(0, 0);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(4);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(267, 55);
+            this.btnSearch.Size = new System.Drawing.Size(200, 45);
             this.btnSearch.TabIndex = 0;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = false;
@@ -280,22 +267,20 @@ namespace WinFormUI
             // 
             this.pnlMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlMain.Location = new System.Drawing.Point(267, 76);
-            this.pnlMain.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlMain.Location = new System.Drawing.Point(200, 62);
             this.pnlMain.Name = "pnlMain";
-            this.pnlMain.Size = new System.Drawing.Size(1000, 634);
+            this.pnlMain.Size = new System.Drawing.Size(750, 515);
             this.pnlMain.TabIndex = 2;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1267, 710);
+            this.ClientSize = new System.Drawing.Size(950, 577);
             this.Controls.Add(this.pnlMain);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";

@@ -59,40 +59,43 @@ namespace DataAccess.Concrete.ADO.NET.SQL
 
                 catch (Exception e)
                 {
-                    Console.SetCursorPosition(38, 15);
-                    //Get database throw text. throw number 50001,50004
-                    Console.WriteLine(e.Message.ToString());
-                    Console.ReadLine();
+                    throw new Exception(e.Message);
                 }
             }
             return rowsAffected;
         }
 
-        public Vehicle OptimizeMc()
+        public List<Vehicle> OptimizeMc()
         {
             Vehicle vehicles = null;
             string sql = "EXECUTE spOptimizeMc";
+            List<Vehicle> optimizeParking = new List<Vehicle>();
             using (SqlConnection conn = sqld.ConnectToDb(connectionString))
             {
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 try
                 {
+                    
                     conn.Open();
                     SqlDataReader dr = cmd.ExecuteReader();
                     while (dr.Read())
                     {
                         vehicles = new Vehicle((string)dr["LicensePlate"]) { SpotNumber = (int)dr["ParkingSpotId"],OldSpotNumber = (int)dr["OldPlace"] };
+                        if (vehicles.SpotNumber == vehicles.OldSpotNumber)
+                        {
+                            
+                            break;
+                        }
+                        optimizeParking.Add(vehicles);
                     }
                 }
                 catch (Exception e)
                 {
-                    Console.SetCursorPosition(38, 15);
-                    Console.WriteLine(e.Message.ToString());
-                    Console.ReadLine();
+                    throw new Exception(e.Message);
                 }
 
             }
-            return vehicles;
+            return optimizeParking;
 
         }
 
@@ -118,10 +121,7 @@ namespace DataAccess.Concrete.ADO.NET.SQL
                 }
                 catch (Exception e)
                 {
-                    Console.SetCursorPosition(38, 17);
-                    //Get database throw text. throw number 50001
-                    Console.WriteLine(e.Message.ToString());
-                    Console.ReadLine();
+                    throw new Exception(e.Message);
                 }
 
             }
@@ -150,9 +150,7 @@ namespace DataAccess.Concrete.ADO.NET.SQL
                 }
                 catch (Exception e)
                 {
-                    Console.SetCursorPosition(38, 15);
-                    Console.WriteLine(e.Message.ToString());
-                    Console.ReadLine();
+                    throw new Exception(e.Message);
                 }
 
             }
@@ -188,10 +186,7 @@ namespace DataAccess.Concrete.ADO.NET.SQL
                 }
                 catch (Exception e)
                 {
-                    Console.SetCursorPosition(38, 15);
-                    //Get database throw text. throw number 50001
-                    Console.WriteLine(e.Message.ToString());
-                    Console.ReadLine();
+                    throw new Exception(e.Message);
                 }
 
             }
@@ -214,10 +209,7 @@ namespace DataAccess.Concrete.ADO.NET.SQL
                 }
                 catch (Exception e)
                 {
-                    Console.SetCursorPosition(38, 15);
-                    //Get database throw text. throw number 50005,50006
-                    Console.WriteLine(e.Message.ToString());
-                    Console.ReadLine();
+                    throw new Exception(e.Message);
                 }
             }
             return rowsAffected;
@@ -242,9 +234,7 @@ namespace DataAccess.Concrete.ADO.NET.SQL
                 }
                 catch (Exception e)
                 {
-                    Console.SetCursorPosition(38, 15);
-                    Console.WriteLine(e.Message.ToString());
-                    Console.ReadLine();
+                    throw new Exception(e.Message);
                 }
 
             }
@@ -272,9 +262,7 @@ namespace DataAccess.Concrete.ADO.NET.SQL
                 }
                 catch (Exception e)
                 {
-                    Console.SetCursorPosition(38, 15);
-                    Console.WriteLine(e.Message.ToString());
-                    Console.ReadLine();
+                    throw new Exception(e.Message);
                 }
             }
             return vehicles;
@@ -301,9 +289,7 @@ namespace DataAccess.Concrete.ADO.NET.SQL
                 }
                 catch (Exception e)
                 {
-                    Console.SetCursorPosition(38, 15);
-                    Console.WriteLine(e.Message.ToString());
-                    Console.ReadLine();
+                    throw new Exception(e.Message);
                 }
             }
             return average;
@@ -327,9 +313,7 @@ namespace DataAccess.Concrete.ADO.NET.SQL
                 }
                 catch (Exception e)
                 {
-                    Console.SetCursorPosition(38, 15);
-                    Console.WriteLine(e.Message.ToString());
-                    Console.ReadLine();
+                    throw new Exception(e.Message);
                 }
 
             }

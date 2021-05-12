@@ -88,6 +88,7 @@ namespace WinFormUI
             this.label1.Size = new System.Drawing.Size(221, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Prague Parking";
+            this.label1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label1_MouseMove);
             // 
             // panel2
             // 
